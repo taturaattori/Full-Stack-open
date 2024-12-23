@@ -12,10 +12,8 @@ const App = () => {
     "The only way to go fast, is to go well.",
   ];
 
-  const points = Array(8).fill(0);
-
   const [selected, setSelected] = useState(0);
-  const [votes, setVotes] = useState(points);
+  const [votes, setVotes] = useState(Array(anecdotes.length).fill(0));
 
   const handleNextClick = () => {
     const index = Math.floor(Math.random() * anecdotes.length);
